@@ -1,0 +1,20 @@
+{
+  "name": "fooddriveatron",
+  "version": "1.0.0",
+  "description": "A web-based app that makes it as easy as possible for anyone to organize a food drive. Built using Node, Express, React, React-Redux, HTML, CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gladysum/fooddriveatron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gladysum/fooddriveatron/issues"
+  },
+  "homepage": "https://github.com/gladysum/fooddriveatron#readme"
+}
