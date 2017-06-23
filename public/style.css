@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
+
+
+.app {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ----- NAVBAR ----- */
+.nav {
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+}
+
+.nav-col-left {
+  display:inline-block;
+  width: 78%;
+  text-align: left;
+  padding: 2%;
+}
+
+.nav-col-right {
+ display:inline-block;
+ width: 16%;
+ text-align: right;
+ vertical-align: top;
+ padding-top: 2%;
+
+}
+
+.link {
+  text-decoration: none;
+}
+
+#home-link {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 37px;
+  font-weight: bold;
+  color: #f46b22;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float:right;
+}
+
+.dropbtn {
+  height: 50px;
+  width: 50px;
+  background-color: #f46b22;
+  color: white;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 2;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 20px;
+  background-color: #f46b22;
+  font-size: 24px;
+  min-width: 150px;
+  z-index: 1;
+  border-radius: 18px 0 18px 18px;
+  margin-top: -30px;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#menu-link {
+  font-family: 'Hammersmith One', sans-serif;
+  color: white;
+  margin: 10px 10px;
+  display: block;
+}
+
+#menu-link:hover {
+  color: yellow;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ----- ORGANIZE PAGE ----- */
+.organize-container {
+  margin: 0 10% 10% 10%;
+  padding: 20px;
+  border-radius: 14px;
+  background-color: white;
+}
+
+.background {
+  height: 102vh;
+  margin: -2% -1% -1% -1%;
+  background-color: lightblue;
+}
+
+
+
+/* ----- HOME PAGE ----- */
+.home {
+  height: 102vh;
+  margin: -2% -1% -1% -1%;
+  background-image: url('/images/beach.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-col-left {
+  display:inline-block;
+  width: 29%;
+}
+
+.home-col-middle {
+  display:inline-block;
+  width: 42%;
+}
+
+.home-col-right {
+  display:inline-block;
+  width: 29%;
+}
+
+.home-face-icon {
+  padding-top: 50px;
+  height: 200px;
+  text-align: center;
+}
+
+.home-main-text {
+  font-size: 26px;
+  color: #666;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.8em;
+}
+
+.spacing-60px {
+  height: 60px;
+}
+
+#chat-button {
+  text-align: center;
+  padding: 15px 40px 15px 40px;
+  width: 200px;
+  height: 40px;
+  background-color: #f46b22;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+#chat-button:hover {
+  background-color: #dc5406;
+}
+
+/* ----- CHAT PAGE----- */
+.background {
+  padding-top: 100px;
+  margin: -2% -1% -1% -1%;
+  padding-bottom: 100px;
+  background-image: url('/images/beach-palms.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chat-col-left {
+  vertical-align: top;
+  display:inline-block;
+  padding-top: 60px;
+  width: 40%;
+}
+
+.chat-col-middle {
+  vertical-align: top;
+  display:inline-block;
+  width: 44%;
+}
+
+.chat-col-right {
+  vertical-align: top;
+  display:inline-block;
+  width: 10%;
+}
+
+.chat-title {
+  padding: 0 0 10px 0;
+  text-align: center;
+  font-size: 44px;
+  color: #f46b22;
+  font-weight: bold;
+}
+
+.chat-container {
+  height: 520px;
+  margin-bottom: 2%;
+  padding: 4%;
+  background-color: aqua;
+  border-radius: 45px;
+}
+
+#chat-background {
+  height: 340px;
+  margin-bottom: 0;
+  padding-bottom: 5%;
+  background-color: white;
+  margin-top: -4%;
+}
+
+.chat {
+  height: 100%;
+  overflow-y: auto;
+  margin-top: 10%;
+  padding-top: 5%;
+  list-style-type: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#statement-by-me {
+  background-color: #3BB9FF !important;
+  color: white !important;
+}
+
+#statement-by-watson {
+  background-color: #B8FCFC !important;
+  color: black !important;
+}
+
+.statement-bubble {
+  margin: 1%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  border-radius: 30px !important;
+}
+
+.input-container {
+  height: 60px;
+  padding: 3%;
+  text-align : left;
+  background-color: #FBF6D9;
+  z-index: 1;
+}
+
+.submit-button-container {
+  margin-top: -13%;
+  margin-right: 5%;
+  text-align: right;
+}
+.submit-button {
+  background-color: #f46b22 !important;
+  border-radius: 8px !important;
+  color: white !important;
+  text-align: center;
+  z-index: 2;
+}
+
+.submit-button:hover {
+  background-color: #dc5406 !important;
+}
+
+/* ----- CONTACT PAGE----- */
+.contact-background {
+  height: 102vh;
+  padding: 150px 0 120px 0;
+  background-color: aqua;
+  margin: -2% -1% -1% -1%;
+}
+
+.contact-col-left {
+  display:inline-block;
+  width: 20%;
+}
+
+.contact-col-middle {
+  display:inline-block;
+  width: 60%;
+}
+
+.contact-col-right {
+  display:inline-block;
+  width: 20%;
+}
+
+.contact-info {
+  background-color: white;
+  border-radius: 14px;
+  padding: 20px 0 40px 0;
+}
+
+.contact-title {
+  font-size: 54px;
+  text-align: center;
+  color: #f46b22;
+  font-weight: bold;
+}
+
+.contact-text {
+  font-size: 24px;
+  line-height: 1.8em;
+  text-align: center;
+  padding-top: 7%;
+  color: #666;
+}
+
+.contact-links {
+  padding-top: 7%;
+}
+
+.contact-col {
+  display:inline-block;
+  text-align: center;
+  width: 33%;
+}
+
+.social {
+  font-weight: bold;
+  font-size: 24px;
+  color: #f46b22;
+}
+
+a.social:hover {
+  color: #dc5406;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/* ----- TEAM PAGE----- */
+.team-background {
+  padding-bottom: 50px;
+  margin: -2% -1% -1% -1%;
+  background-color: #82CAFA;
+}
+
+.team-col-left {
+  display:inline-block;
+  width: 22%;
+}
+
+.team-col-middle {
+  display:inline-block;
+  width: 56%;
+}
+
+.team-col-right {
+  display:inline-block;
+  width: 22%;
+}
+
+.team-title {
+  margin-top: 100px;
+  font-size: 54px;
+  text-align: center;
+  color: #f46b22;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.bio {
+  background-color: white;
+  padding: 30px;
+  border-radius: 14px;
+  margin-bottom: 70px;
+  min-height: 290px;
+}
+
+#bio-name {
+  color: #f46b22;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#bio-name:hover {
+  color: #dc5406;
+}
+
+#bio-pic {
+  width: 300px;
+  float: left;
+  margin: 0 30px 10px 0;
+}
+
+#bio-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6em;
+}
+
+
+/* ----- FAQS PAGE----- */
+.faqs-background {
+  height: 102vh;
+  margin: -2% -1% -1% -1%;
+  background-image: url('/images/beach-chair.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.faqs-title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  color: #f46b22;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+
+.faqs-col-left {
+  display:inline-block;
+  width: 25%;
+}
+
+.faqs-col-middle {
+  display:inline-block;
+  width: 50%;
+}
+
+.faqs-col-right {
+  display:inline-block;
+  width: 25%;
+}
+
+.faqs-container {
+  background-color: white;
+  border-radius: 14px;
+  padding: 30px;
+  color: #666;
+}
+
+.question {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.33em;
+  padding-bottom: 6px;
+}
+
+.answer {
+  font-size: 18px;
+  line-height: 1.6em;
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: #9b9b9b;
+}
+
+.footer-col-edge {
+  vertical-align: top;
+  display:inline-block;
+  width: 27%;
+}
+
+.footer-col-1 {
+  vertical-align: top;
+  display:inline-block;
+  width: 24%;
+}
+
+.footer-col-2 {
+  vertical-align: top;
+  display:inline-block;
+  width: 16%;
+}
+
+.footer-col-3 {
+  vertical-align: top;
+  display:inline-block;
+  width: 18%;
+}
+
+#small-title {
+  font-family: 'Hammersmith One', sans-serif;
+  color: #f46b22;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2em;
+}
+
+#footer-link {
+  color: #9b9b9b;
+  font-size: 14px;
+  line-height: 2em;
+}
+
+#footer-link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  padding-top: 19px;
+  font-size: 12px;
+}
+
+

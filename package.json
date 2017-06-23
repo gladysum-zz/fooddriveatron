@@ -1,20 +1,37 @@
 {
   "name": "fooddriveatron",
   "version": "1.0.0",
-  "description": "A web-based app that makes it as easy as possible for anyone to organize a food drive. Built using Node, Express, React, React-Redux, HTML, CSS.",
-  "main": "index.js",
+  "description": "An app for organizing food drives",
+  "main": "start.js",
   "scripts": {
-    "test": ""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gladysum/fooddriveatron.git"
+    "test": "",
+    "start": "webpack -w & NODE_ENV=production nodemon start.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gladys Um",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gladysum/fooddriveatron/issues"
-  },
-  "homepage": "https://github.com/gladysum/fooddriveatron#readme"
+  "dependencies": {
+    "axios": "^0.16.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "json-loader": "^0.5.4",
+    "material-ui": "^0.18.0",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "pg": "^6.4.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.3.2",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "sequelize": "^4.2.0",
+    "webpack": "^1.15.0"
+  }
 }
