@@ -24,7 +24,7 @@ app.use('/', require('./routes'));
 models.db.sync()
 .then(function () {
   app.listen(3000, function () {
-      console.log('Server listening on 3000!');
+      console.log('Server listening on 3000');
   });
 })
 .catch(console.error);
