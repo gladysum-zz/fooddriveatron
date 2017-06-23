@@ -42079,11 +42079,11 @@
 	
 	    _this.state = {
 	      fooddrivename: '',
-	      organizer: '',
+	      organizername: '',
+	      organizeremail: '',
 	      month: '',
 	      date: '',
 	      year: '',
-	      starttime: '',
 	      venue: '',
 	      streetaddress: '',
 	      town: '',
@@ -42111,11 +42111,11 @@
 	      // Clear the user input field upon submit
 	      this.setState({
 	        fooddrivename: '',
-	        organizer: '',
+	        organizername: '',
+	        organizeremail: '',
 	        month: '',
 	        date: '',
 	        year: '',
-	        starttime: '',
 	        venue: '',
 	        streetaddress: '',
 	        town: '',
@@ -42141,9 +42141,13 @@
 	        type: 'text',
 	        value: this.state.fooddrivename,
 	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Your name:', _react2.default.createElement('input', {
-	        name: 'organizer',
+	        name: 'organizername',
 	        type: 'text',
-	        value: this.state.organizer,
+	        value: this.state.organizername,
+	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Your email:', _react2.default.createElement('input', {
+	        name: 'organizeremail',
+	        type: 'text',
+	        value: this.state.organizeremail,
 	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Month:', _react2.default.createElement('input', {
 	        name: 'month',
 	        type: 'text',
@@ -42156,10 +42160,6 @@
 	        name: 'year',
 	        type: 'text',
 	        value: this.state.year,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Starttime:', _react2.default.createElement('input', {
-	        name: 'starttime',
-	        type: 'text',
-	        value: this.state.starttime,
 	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Venue:', _react2.default.createElement('input', {
 	        name: 'venue',
 	        type: 'text',

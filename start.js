@@ -21,7 +21,7 @@ app.get('/*', (_, res) => res.sendFile(resolve(__dirname, 'public', 'index.html'
 const models = require('./models');
 app.use('/', require('./routes'));
 
-models.db.sync()
+models.db.sync({force:true}) // Set force:true if you want to reset the database each time you restart server.
 .then(function () {
   app.listen(3000, function () {
       console.log('Server listening on 3000');

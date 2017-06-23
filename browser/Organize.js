@@ -6,11 +6,11 @@ export default class Organize extends React.Component {
     super();
     this.state = {
       fooddrivename: '',
-      organizer: '',
+      organizername: '',
+      organizeremail: '',
       month:'',
       date: '',
       year:'',
-      starttime: '',
       venue:'',
       streetaddress:'',
       town:'',
@@ -36,11 +36,11 @@ export default class Organize extends React.Component {
     // Clear the user input field upon submit
     this.setState({
       fooddrivename: '',
-      organizer: '',
+      organizername: '',
+      organizeremail: '',
       month:'',
       date: '',
       year:'',
-      starttime: '',
       venue:'',
       streetaddress:'',
       town:'',
@@ -76,9 +76,19 @@ export default class Organize extends React.Component {
             <label>
               Your name:
               <input
-                name="organizer"
+                name="organizername"
                 type="text"
-                value={this.state.organizer}
+                value={this.state.organizername}
+                onChange={this.handleChange} />
+            </label>
+            <br/>
+
+            <label>
+              Your email:
+              <input
+                name="organizeremail"
+                type="text"
+                value={this.state.organizeremail}
                 onChange={this.handleChange} />
             </label>
             <br/>
@@ -109,16 +119,6 @@ export default class Organize extends React.Component {
                 name="year"
                 type="text"
                 value={this.state.year}
-                onChange={this.handleChange} />
-            </label>
-            <br/>
-
-            <label>
-              Starttime:
-              <input
-                name="starttime"
-                type="text"
-                value={this.state.starttime}
                 onChange={this.handleChange} />
             </label>
             <br/>

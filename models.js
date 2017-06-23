@@ -25,7 +25,13 @@ var Fooddrive = db.define('fooddrive', {
     validate: {notEmpty: true}
   },
 
-  organizer: {
+  organizername: {
+    type: Sequelize.STRING,
+    allowNull: false,
+     validate: {notEmpty: true}
+  },
+
+  organizeremail: {
     type: Sequelize.STRING,
     allowNull: false,
      validate: {notEmpty: true}
@@ -44,12 +50,6 @@ var Fooddrive = db.define('fooddrive', {
   },
 
   year: {
-    type: Sequelize.STRING,
-    allowNull: false,
-     validate: {notEmpty: true}
-  },
-
-  starttime: {
     type: Sequelize.STRING,
     allowNull: false,
      validate: {notEmpty: true}
