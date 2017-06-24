@@ -563,6 +563,13 @@ a:active {
   padding-bottom: 12px;
 }
 
+.socialmedia {
+  font-size: 18px;
+  line-height: 1.6em;
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+
 /* ----- FOOTER ----- */
 .footer {
   padding-top: 60px;

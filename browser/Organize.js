@@ -8,15 +8,15 @@ class Organize extends React.Component {
   constructor() {
     super();
     this.state = {
-      organizerphone: '',
-      organizername: '',
-      organizeremail: '',
-      monthdayyear:'',
-      starttime: '',
-      endtime:'',
-      venue:'',
-      streetaddress:'',
-      townstatezip:''
+      organizerphone: '(202)725-1002',
+      organizername: 'Gladys Um',
+      organizeremail: 'gladysum@gmail.com',
+      monthdayyear:'August 20, 2017',
+      starttime: '10AM',
+      endtime:'4PM',
+      venue:'PS 123',
+      streetaddress:'4 Hill St',
+      townstatezip:'New York NY 11212'
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,17 +35,17 @@ class Organize extends React.Component {
     let input = this.state;
 
     // Clear the user input field upon submit
-    this.setState({
-      organizerphone: '',
-      organizername: '',
-      organizeremail: '',
-      monthdayyear:'',
-      starttime: '',
-      endtime:'',
-      venue:'',
-      streetaddress:'',
-      townstatezip:''
-    });
+    // this.setState({
+    //   organizerphone: '',
+    //   organizername: '',
+    //   organizeremail: '',
+    //   monthdayyear:'',
+    //   starttime: '',
+    //   endtime:'',
+    //   venue:'',
+    //   streetaddress:'',
+    //   townstatezip:''
+    // });
 
     // Update the redux store with user's input
     //this.props.addInput(input)

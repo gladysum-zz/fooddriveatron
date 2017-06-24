@@ -42086,15 +42086,15 @@
 	    var _this = _possibleConstructorReturn(this, (Organize.__proto__ || Object.getPrototypeOf(Organize)).call(this));
 	
 	    _this.state = {
-	      organizerphone: '',
-	      organizername: '',
-	      organizeremail: '',
-	      monthdayyear: '',
-	      starttime: '',
-	      endtime: '',
-	      venue: '',
-	      streetaddress: '',
-	      townstatezip: ''
+	      organizerphone: '(202)725-1002',
+	      organizername: 'Gladys Um',
+	      organizeremail: 'gladysum@gmail.com',
+	      monthdayyear: 'August 20, 2017',
+	      starttime: '10AM',
+	      endtime: '4PM',
+	      venue: 'PS 123',
+	      streetaddress: '4 Hill St',
+	      townstatezip: 'New York NY 11212'
 	    };
 	    _this.handleChange = _this.handleChange.bind(_this);
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -42117,17 +42117,17 @@
 	      var input = this.state;
 	
 	      // Clear the user input field upon submit
-	      this.setState({
-	        organizerphone: '',
-	        organizername: '',
-	        organizeremail: '',
-	        monthdayyear: '',
-	        starttime: '',
-	        endtime: '',
-	        venue: '',
-	        streetaddress: '',
-	        townstatezip: ''
-	      });
+	      // this.setState({
+	      //   organizerphone: '',
+	      //   organizername: '',
+	      //   organizeremail: '',
+	      //   monthdayyear:'',
+	      //   starttime: '',
+	      //   endtime:'',
+	      //   venue:'',
+	      //   streetaddress:'',
+	      //   townstatezip:''
+	      // });
 	
 	      // Update the redux store with user's input
 	      //this.props.addInput(input)
@@ -45420,7 +45420,7 @@
 	        actions: actions,
 	        modal: true,
 	        open: this.state.open
-	      }, _react2.default.createElement('div', { className: 'question' }, 'Your food drive will take place at the following venue:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip), _react2.default.createElement('div', { className: 'question' }, 'Your food drive will take place at the following date/time:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime), _react2.default.createElement('div', { className: 'question' }, 'Spread the news about the food drive on social networks:'), _react2.default.createElement('div', { className: 'answer' }), _react2.default.createElement('div', { className: 'question' }, _react2.default.createElement(_reactRouterDom.Link, { to: '/volunteer', className: 'link', id: 'bio-name' }, 'Go to your food drive volunteer sign-up page'))));
+	      }, _react2.default.createElement('div', { className: 'question' }, 'Your food drive will take place at the following venue:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip), _react2.default.createElement('div', { className: 'question' }, 'Your food drive will take place at the following date/time:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime), _react2.default.createElement('div', { className: 'question' }, 'Spread the news about the food drive on social networks:'), _react2.default.createElement('div', { className: 'socialmedia' }, _react2.default.createElement('img', { src: './images/gmail.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/fb.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/tw.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/ig.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/snap.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/in.png', style: { width: "40px", height: "40px", paddingRight: "30px" } })), _react2.default.createElement('div', { className: 'question' }, _react2.default.createElement(_reactRouterDom.Link, { to: '/volunteer', className: 'link', id: 'bio-name' }, 'Go to your food drive volunteer sign-up page'))));
 	    }
 	  }]);
 	
@@ -46883,11 +46883,11 @@
 	    var _this = _possibleConstructorReturn(this, (Volunteer.__proto__ || Object.getPrototypeOf(Volunteer)).call(this));
 	
 	    _this.state = {
-	      volunteerphone: '',
-	      volunteername: '',
-	      volunteeremail: '',
+	      volunteerphone: '(212)123-4567',
+	      volunteername: 'Lee Wilson',
+	      volunteeremail: 'leewilson@gmail.com',
 	      timeslot1: false,
-	      timeslot2: false,
+	      timeslot2: true,
 	      timeslot3: false
 	    };
 	    _this.handleChange = _this.handleChange.bind(_this);
@@ -46920,14 +46920,14 @@
 	      // }
 	
 	      // Clear the user input field upon submit
-	      this.setState({
-	        volunteerphone: '',
-	        volunteername: '',
-	        volunteeremail: '',
-	        timeslot1: false,
-	        timeslot2: false,
-	        timeslot3: false
-	      });
+	      // this.setState({
+	      //   volunteerphone: '',
+	      //   volunteername: '',
+	      //   volunteeremail: '',
+	      //   timeslot1: false,
+	      //   timeslot2: false,
+	      //   timeslot3: false
+	      // });
 	
 	      // Show the volunteer confirmation modal
 	      this.props.openTheVolunteerModal();
@@ -46951,7 +46951,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'background' }, _react2.default.createElement('div', { className: 'organize-container' }, _react2.default.createElement('div', { className: 'faqs-title' }, 'Sign Up to Volunteer at ' + this.props.fooddrive.organizername + '\'s Food Drive'), _react2.default.createElement('div', { className: 'faqs-container' }, _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following venue:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip), _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following date/time:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime), _react2.default.createElement('div', { className: 'question' }, 'Spread the news about the food drive on social networks:'), _react2.default.createElement('div', { className: 'answer' }, 'facebook twitter etc'), _react2.default.createElement('hr', null), _react2.default.createElement('div', { className: 'form-title' }, _react2.default.createElement('i', null, 'FoodDriveATron')), this.props.volunteermodal ? _react2.default.createElement(_VolunteerModal2.default, { fooddrive: this.props.fooddrive }) : null, _react2.default.createElement('form', { onSubmit: this.handleSubmit }, _react2.default.createElement('div', { className: 'input-form' }, _react2.default.createElement('div', { id: 'stylized' }, _react2.default.createElement('div', { className: 'input-col-left' }, _react2.default.createElement('h1', null, 'Your contact info'), _react2.default.createElement('label', null, 'Your full name:', _react2.default.createElement('input', {
+	      return _react2.default.createElement('div', { className: 'background' }, _react2.default.createElement('div', { className: 'organize-container' }, _react2.default.createElement('div', { className: 'faqs-title' }, 'Sign Up to Volunteer at ' + this.props.fooddrive.organizername + '\'s Food Drive'), _react2.default.createElement('div', { className: 'faqs-container' }, _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following venue:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip), _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following date/time:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime), _react2.default.createElement('div', { className: 'question' }, 'Spread the news about the food drive on social networks:'), _react2.default.createElement('div', { className: 'socialmedia' }, _react2.default.createElement('img', { src: './images/gmail.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/fb.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/tw.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/ig.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/snap.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/in.png', style: { width: "40px", height: "40px", paddingRight: "30px" } })), _react2.default.createElement('hr', null), _react2.default.createElement('div', { className: 'form-title' }, _react2.default.createElement('i', null, 'FoodDriveATron')), this.props.volunteermodal ? _react2.default.createElement(_VolunteerModal2.default, { fooddrive: this.props.fooddrive }) : null, _react2.default.createElement('form', { onSubmit: this.handleSubmit }, _react2.default.createElement('div', { className: 'input-form' }, _react2.default.createElement('div', { id: 'stylized' }, _react2.default.createElement('div', { className: 'input-col-left' }, _react2.default.createElement('h1', null, 'Your contact info'), _react2.default.createElement('label', null, 'Your full name:', _react2.default.createElement('input', {
 	        name: 'volunteername',
 	        type: 'text',
 	        value: this.state.volunteername,
@@ -47100,7 +47100,7 @@
 	        actions: actions,
 	        modal: true,
 	        open: this.state.open
-	      }, _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following venue:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip), _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following date/time:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime), _react2.default.createElement('div', { className: 'question' }, 'Spread the news about the food drive on social networks:'), _react2.default.createElement('div', { className: 'answer' })));
+	      }, _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following venue:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip), _react2.default.createElement('div', { className: 'question' }, 'The food drive will take place at the following date/time:'), _react2.default.createElement('div', { className: 'answer' }, this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime), _react2.default.createElement('div', { className: 'question' }, 'Spread the news about the food drive on social networks:'), _react2.default.createElement('div', { className: 'socialmedia' }, _react2.default.createElement('img', { src: './images/gmail.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/fb.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/tw.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/ig.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/snap.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }), _react2.default.createElement('img', { src: './images/in.png', style: { width: "40px", height: "40px", paddingRight: "30px" } }))));
 	    }
 	  }]);
 	

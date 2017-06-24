@@ -8,11 +8,11 @@ class Volunteer extends React.Component {
   constructor() {
     super();
     this.state = {
-      volunteerphone: '',
-      volunteername: '',
-      volunteeremail: '',
+      volunteerphone: '(212)123-4567',
+      volunteername: 'Lee Wilson',
+      volunteeremail: 'leewilson@gmail.com',
       timeslot1: false,
-      timeslot2: false,
+      timeslot2: true,
       timeslot3: false
     }
     this.handleChange = this.handleChange.bind(this);
@@ -43,14 +43,14 @@ class Volunteer extends React.Component {
     // }
 
     // Clear the user input field upon submit
-    this.setState({
-      volunteerphone: '',
-      volunteername: '',
-      volunteeremail: '',
-      timeslot1: false,
-      timeslot2: false,
-      timeslot3: false
-    });
+    // this.setState({
+    //   volunteerphone: '',
+    //   volunteername: '',
+    //   volunteeremail: '',
+    //   timeslot1: false,
+    //   timeslot2: false,
+    //   timeslot3: false
+    // });
 
     // Show the volunteer confirmation modal
     this.props.openTheVolunteerModal();
@@ -97,8 +97,14 @@ class Volunteer extends React.Component {
               <div className="question">
                 Spread the news about the food drive on social networks:
               </div>
-              <div className="answer">
-                facebook twitter etc
+
+              <div className="socialmedia">
+                <img src="./images/gmail.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
+                <img src="./images/fb.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
+                <img src="./images/tw.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
+                <img src="./images/ig.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
+                <img src="./images/snap.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
+                <img src="./images/in.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
               </div>
               <hr/>
               <div className="form-title">
