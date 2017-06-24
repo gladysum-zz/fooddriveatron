@@ -35,10 +35,7 @@ router.get("/fooddrives/:id", (req, res, next)=>{
 
 // Add a volunteer to a fooddrive
 router.put("/fooddrives/:id", (req, res, next)=>{
-  Fooddrive.update(
-  {
-    volunteers1: volunteers1.concat(req.body.input.email)
-  },
+  Fooddrive.update(req.body.input,
   {
     where: {id: req.params.id}
   })

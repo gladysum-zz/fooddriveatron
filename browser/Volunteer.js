@@ -8,56 +8,67 @@ class Volunteer extends React.Component {
   constructor() {
     super();
     this.state = {
-      organizerphone: '',
-      organizername: '',
-      organizeremail: '',
-      monthdayyear:'',
-      starttime: '',
-      endtime:'',
-      venue:'',
-      streetaddress:'',
-      townstatezip:''
+      volunteerphone: '',
+      volunteername: '',
+      volunteeremail: '',
+      timeslot1: false,
+      timeslot2: false,
+      timeslot3: false
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    const value = event.target.value;
-    const name = event.target.name;
-    this.setState({
-      [name]: value
-    });
-  }
+      const target = event.target;
+      const value = target.type === 'checkbox' ? target.checked : target.value;
+      const name = target.name;
+
+      this.setState({
+        [name]: value
+      });
+    }
 
   handleSubmit(event) {
     event.preventDefault();
-    let input = this.state;
+    // let input = {};
+    // if (this.state.timeslot1) {
+    //   input['volunteers1'] = this.state.volunteername;
+    // }
+    // if (this.state.timeslot2) {
+    //   input['volunteers2'] = this.state.volunteername;
+    // }
+    // if (this.state.timeslot3) {
+    //   input['volunteers3'] = this.state.volunteername;
+    // }
 
     // Clear the user input field upon submit
     this.setState({
-      organizerphone: '',
-      organizername: '',
-      organizeremail: '',
-      monthdayyear:'',
-      starttime: '',
-      endtime:'',
-      venue:'',
-      streetaddress:'',
-      townstatezip:''
+      volunteerphone: '',
+      volunteername: '',
+      volunteeremail: '',
+      timeslot1: false,
+      timeslot2: false,
+      timeslot3: false
     });
+
+    // Show the volunteer confirmation modal
+    this.props.openTheVolunteerModal();
 
     // Update the redux store with user's input
     //this.props.addInput(input)
 
     // Send input to database; get response with new fooddrive information
-    axios.post('/fooddrives', {input: input})
-    .then(res=>{
-      console.log(res.data);
-      this.props.updateFoodDrive(res.data);
-      this.props.openTheOrganizerModal();
-    })
-    .catch(error=>{console.log(error)});
+    // axios.put(`/fooddrives/${this.props.fooddrive.id}`, {input: input})
+    // .then(res=>{
+    //   console.log(res.data);
+    //   this.props.openTheVolunteerModal();
+    // })
+    // .catch(error=>{console.log(error)});
+  }
+
+  componentWillMount() {
+    window.scrollTo(0, 0)
   }
 
   render() {
@@ -65,39 +76,29 @@ class Volunteer extends React.Component {
       <div className="background">
         <div className="organize-container">
           <div className="faqs-title">
-          Organizing a Food Drive Is Easy!
+          {`Sign Up to Volunteer at ${this.props.fooddrive.organizername}'s Food Drive`}
           </div>
           <div className="faqs-container">
 
               <div className="question">
-                Step 1: Find a Venue
+                The food drive will take place at the following venue:
               </div>
               <div className="answer">
-                Find a venue that is able to host your food drive. Your local school, library, or church are good places to start.
+                {this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip}
               </div>
+
               <div className="question">
-                Step 2: Find a Food Bank
+                The food drive will take place at the following date/time:
               </div>
               <div className="answer">
-                Find a local food bank that is able to accept your donations.
+                {this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime}
               </div>
+
               <div className="question">
-                Step 3: Decide on a Date and Time
+                Spread the news about the food drive on social networks:
               </div>
               <div className="answer">
-                Make sure that your venue and local food bank are both open and available that day.
-              </div>
-              <div className="question">
-                Step 4: Enter Your Food Drive Info in the <i>FoodDriveATron</i>
-              </div>
-              <div className="answer">
-                Before filling out the <i>FoodDriveATron</i>, make sure you've completed steps 1, 2, and 3! Once you submit your food drive info, the <i>FoodDriveATron</i> will kick off a series of automated processes that will send messages announcing your event to all your contacts. The messages will include a link to a website where people can sign up to volunteer. The <i>FoodDriveATron</i> will also send reminder messages to the volunteers.
-              </div>
-              <div className="question">
-                Step 5: Go to Your Successfully Planned Food Drive!
-              </div>
-              <div className="answer">
-                Show up at the venue on the day of your food drive and have a great time!
+                facebook twitter etc
               </div>
               <hr/>
               <div className="form-title">
@@ -117,9 +118,9 @@ class Volunteer extends React.Component {
                   <label>
                     Your full name:
                     <input
-                      name="organizername"
+                      name="volunteername"
                       type="text"
-                      value={this.state.organizername}
+                      value={this.state.volunteername}
                       onChange={this.handleChange} />
                   </label>
                   <br/>
@@ -127,9 +128,9 @@ class Volunteer extends React.Component {
                   <label>
                     Your email:
                     <input
-                      name="organizeremail"
+                      name="volunteeremail"
                       type="text"
-                      value={this.state.organizeremail}
+                      value={this.state.volunteeremail}
                       onChange={this.handleChange} />
                   </label>
                   <br/>
@@ -137,75 +138,50 @@ class Volunteer extends React.Component {
                   <label>
                     Your phone number:
                     <input
-                      name="organizerphone"
+                      name="volunteerphone"
                       type="text"
-                      value={this.state.organizerphone}
+                      value={this.state.volunteerphone}
                       onChange={this.handleChange} />
                   </label>
                 </div>
 
-                <div className="input-col-middle">
-                  <h1>When is your food drive?</h1>
-                  <label>
-                    Month, day, year:
-                    <input
-                      name="monthdayyear"
-                      type="text"
-                      value={this.state.monthdayyear}
-                      onChange={this.handleChange} />
-                  </label>
-                  <br/>
+                <div className="input-col-middle-checkboxes">
+
+                  <h1>Choose your time slot(s):</h1>
 
                   <label>
-                    Start time:
+                    10AM to 12PM:
                     <input
-                      name="starttime"
-                      type="text"
-                      value={this.state.starttime}
+                      name="timeslot1"
+                      type="checkbox"
+                      checked={this.state.timeslot1}
                       onChange={this.handleChange} />
                   </label>
-                  <br/>
+                  <br />
 
                   <label>
-                    End time:
+                    12PM to 2PM:
                     <input
-                      name="endtime"
-                      type="text"
-                      value={this.state.endtime}
+                      name="timeslot2"
+                      type="checkbox"
+                      checked={this.state.timeslot2}
                       onChange={this.handleChange} />
                   </label>
+                  <br />
+
+                  <label>
+                    2PM to 4PM:
+                    <input
+                      name="timeslot3"
+                      type="checkbox"
+                      checked={this.state.timeslot3}
+                      onChange={this.handleChange} />
+                  </label>
+                  <br />
+
                 </div>
 
                 <div className="input-col-right">
-                  <h1>Where is your food drive?</h1>
-                  <label>
-                    Name of venue:
-                    <input
-                      name="venue"
-                      type="text"
-                      value={this.state.venue}
-                      onChange={this.handleChange} />
-                  </label>
-                  <br/>
-
-                  <label>
-                    Venue street address:
-                    <input
-                      name="streetaddress"
-                      type="text"
-                      value={this.state.streetaddress}
-                      onChange={this.handleChange} />
-                  </label>
-                  <br/>
-
-                  <label>
-                    Venue town, state, zipcode:
-                    <input
-                      name="townstatezip"
-                      type="text"
-                      value={this.state.townstatezip}
-                      onChange={this.handleChange} />
-                  </label>
                 </div>
                 </div>
                 </div>

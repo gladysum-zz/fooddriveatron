@@ -368,6 +368,11 @@
   width: 33%;
 }
 
+.input-col-middle-checkboxes {
+  display:inline-block;
+  width: 33%;
+}
+
 .input-col-right {
   display:inline-block;
   width: 33%;

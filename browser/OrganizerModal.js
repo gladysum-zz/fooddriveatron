@@ -5,6 +5,7 @@ import {openTheOrganizerModal} from './reducer';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 
+
 // Confirmation modal appears when user creates a food drive
 class OrganizerModal extends React.Component {
   constructor() {
@@ -54,10 +55,10 @@ class OrganizerModal extends React.Component {
           </div>
 
           <div className="question">
-            Share your food drive on social networks:
+            Spread the news about the food drive on social networks:
           </div>
           <div className="answer">
-            facebook twitter etc
+
           </div>
 
           <div className="question">
