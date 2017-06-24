@@ -37,6 +37,7 @@
 #home-link {
   font-family: 'Archivo Black', sans-serif;
   font-size: 37px;
+  font-style: italic;
   font-weight: bold;
   color: #f46b22;
 }
@@ -103,16 +104,19 @@
 
 /* ----- ORGANIZE PAGE ----- */
 .organize-container {
-  margin: 0 10% 10% 10%;
+  margin: 0 20% 0 20%;
   padding: 20px;
   border-radius: 14px;
   background-color: white;
 }
 
 .background {
-  height: 102vh;
   margin: -2% -1% -1% -1%;
-  background-color: lightblue;
+  padding: 100px 0 100px 0;
+  background-image: url('/images/food.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: yellow;
 }
 
 /* ----- HOME PAGE ----- */
@@ -174,14 +178,6 @@
 }
 
 /* ----- CHAT PAGE----- */
-.background {
-  padding-top: 100px;
-  margin: -2% -1% -1% -1%;
-  padding-bottom: 100px;
-  background-image: url('/images/beach-palms.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .chat-col-left {
   vertical-align: top;
@@ -434,12 +430,12 @@ a:active {
 }
 
 .faqs-title {
-  margin-top: 100px;
+  margin-top: 10px;
   text-align: center;
   font-size: 40px;
   color: #f46b22;
   font-weight: bold;
-  padding-bottom: 25px;
+
 }
 
 .faqs-col-left {

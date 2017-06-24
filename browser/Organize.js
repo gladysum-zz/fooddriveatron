@@ -67,6 +67,44 @@ class Organize extends React.Component {
     return (
       <div className="background">
         <div className="organize-container">
+          <div className="faqs-title">
+          Organizing a Food Drive Is Easy!
+          </div>
+          <div className="faqs-container">
+
+              <div className="question">
+                Step 1: Find a Venu
+              </div>
+              <div className="answer">
+                Find a venue that is able to host your food drive. Your local school, library, or church are good places to start.
+              </div>
+              <div className="question">
+                Step 2: Find a Food Bank
+              </div>
+              <div className="answer">
+                Find a local food bank that is able to accept your donations.
+              </div>
+              <div className="question">
+                Step 3: Decide on a Date and Time
+              </div>
+              <div className="answer">
+                Make sure that your venue and local food bank are both open and available that day.
+              </div>
+              <div className="question">
+                Step 4: Enter Your Food Drive Info in the Food Drive A Tron
+              </div>
+              <div className="answer">
+                Before filling out the Food Drive A Tron, make sure you've completed steps 1, 2, and 3! Once you submit your food drive info, the Food Drive A Tron will kick off a series of automated processes that will send messages announcing your event to all your contacts. The messages will include a link to a website where people can sign up to volunteer. The Food Drive A Tron will also send reminder messages to the volunteers.
+              </div>
+              <div className="question">
+                Step 5: Go to Successfully Planned Food Drive!
+              </div>
+              <div className="answer">
+                Show up at the venue on the day of your food drive and have a great time!
+              </div>
+          </div>
+
+
           {this.props.organizermodal ? <OrganizerModal/> : null}
           <form onSubmit={this.handleSubmit}>
 
