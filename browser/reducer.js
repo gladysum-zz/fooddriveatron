@@ -1,6 +1,7 @@
 const initialState = {
   organizermodal: false,
-  volunteermodal: false
+  volunteermodal: false,
+  fooddrive: {}
 }
 
 /* ------------ REDUCER ------------------ */
@@ -17,6 +18,11 @@ const reducer = (state = initialState, action) => {
         volunteermodal: !state.volunteermodal
       })
 
+    case FOODDRIVE:
+      return Object.assign({}, state, {
+        fooddrive: action.payload
+      })
+
     default:
       return state;
   }
@@ -26,6 +32,7 @@ const reducer = (state = initialState, action) => {
 
 const ORGANIZER_MODAL_OPEN = 'ORGANIZER_MODAL_OPEN';
 const VOLUNTEER_MODAL_OPEN = 'VOLUNTEER_MODAL_OPEN';
+const FOODDRIVE = 'FOODDRIVE';
 
 
 /* ------------ ACTION CREATORS ------------------ */
@@ -34,8 +41,13 @@ export const openTheOrganizerModal = () => ({
   type: ORGANIZER_MODAL_OPEN
 })
 
-export const VolunteerModalOpenAction = () => ({
+export const openTheVolunteerModal = () => ({
   type: VOLUNTEER_MODAL_OPEN
+})
+
+export const updateFoodDrive = input => ({
+  type: FOODDRIVE,
+  payload: input
 })
 
 /* ------------------ DEFAULT EXPORT ------------------ */

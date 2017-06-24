@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom'
 import {openTheOrganizerModal} from './reducer';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
@@ -33,12 +34,38 @@ class OrganizerModal extends React.Component {
     return (
       <div>
         <Dialog
-          title="Confirmation"
+          title="Food drive successfully created!"
           actions={actions}
           modal={true}
           open={this.state.open}
         >
-          Food drive successfully created!
+          <div className="question">
+            Your food drive will take place at the following venue:
+          </div>
+          <div className="answer">
+            {this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip}
+          </div>
+
+          <div className="question">
+            Your food drive will take place at the following date/time:
+          </div>
+          <div className="answer">
+            {this.props.fooddrive.monthdayyear + ', ' + this.props.fooddrive.starttime + ' to ' + this.props.fooddrive.endtime}
+          </div>
+
+          <div className="question">
+            Share your food drive on social networks:
+          </div>
+          <div className="answer">
+            facebook twitter etc
+          </div>
+
+          <div className="question">
+            <Link to={'/volunteer'} className="link" id="bio-name">Go to your food drive volunteer sign-up page</Link>
+          </div>
+
+
+
         </Dialog>
       </div>
     );

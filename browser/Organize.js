@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
-import {openTheOrganizerModal} from './reducer';
+import {openTheOrganizerModal, updateFoodDrive} from './reducer';
 import OrganizerModal from './OrganizerModal';
 
 class Organize extends React.Component {
@@ -54,6 +54,7 @@ class Organize extends React.Component {
     axios.post('/fooddrives', {input: input})
     .then(res=>{
       console.log(res.data);
+      this.props.updateFoodDrive(res.data);
       this.props.openTheOrganizerModal();
     })
     .catch(error=>{console.log(error)});
@@ -103,7 +104,7 @@ class Organize extends React.Component {
                 <i>FoodDriveATron</i>
               </div>
 
-              {this.props.organizermodal ? <OrganizerModal/> : null}
+              {this.props.organizermodal ? <OrganizerModal fooddrive={this.props.fooddrive}/> : null}
 
               <form onSubmit={this.handleSubmit}>
 
@@ -222,12 +223,16 @@ class Organize extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  organizermodal: state.organizermodal
+  organizermodal: state.organizermodal,
+  fooddrive: state.fooddrive
 })
 
 const mapDispatchToProps = dispatch => ({
   openTheOrganizerModal: () => {
     dispatch(openTheOrganizerModal())
+  },
+  updateFoodDrive: input => {
+    dispatch(updateFoodDrive(input))
   }
 })
 
