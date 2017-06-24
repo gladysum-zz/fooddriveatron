@@ -1,26 +1,22 @@
-import axios from 'axios'
-const greetings = [
-  '¡Hola! ¿Quieres hablar español conmigo?',
-  '¡Hola! ¿Quieres hablar castellano conmigo?',
-  '¡Hola! ¿Quieres chatear conmigo?',
-  '¡Hola! ¿Quieres chatear en castellano conmigo?',
-  '¡Hola! ¿Quieres chatear en español conmigo?',
-  '¡Hola! ¿Qué tal?',
-  '¡Hola! ¿Quieres practicar el español conmigo?',
-  '¡Hola! ¿Quieres practicar el castellano conmigo?'
-]
-
 const initialState = {
-  messages: [['watson', greetings[Math.floor(Math.random()*8)]]]
+  organizermodal: false,
+  volunteermodal: false
 }
 
 /* ------------ REDUCER ------------------ */
 
 const reducer = (state = initialState, action) => {
   switch(action.type) {
-    case ADD:
-      if (state.messages.length > 200) return {state, messages: state.messages.slice(1).concat(action.payload)};
-      return {state, messages: state.messages.concat(action.payload)};
+    case ORGANIZER_MODAL_OPEN:
+      return Object.assign({}, state, {
+        organizermodal: !state.organizermodal
+      })
+
+    case VOLUNTEER_MODAL_OPEN:
+      return Object.assign({}, state, {
+        volunteermodal: !state.volunteermodal
+      })
+
     default:
       return state;
   }
@@ -28,18 +24,18 @@ const reducer = (state = initialState, action) => {
 
 /* ----------------- ACTIONS ------------------ */
 
-const ADD = 'ADD';
+const ORGANIZER_MODAL_OPEN = 'ORGANIZER_MODAL_OPEN';
+const VOLUNTEER_MODAL_OPEN = 'VOLUNTEER_MODAL_OPEN';
+
 
 /* ------------ ACTION CREATORS ------------------ */
 
-export const addInputAction = input => ({
-  type: ADD,
-  payload: [['me', input]]
+export const openTheOrganizerModal = () => ({
+  type: ORGANIZER_MODAL_OPEN
 })
 
-export const addResponseAction = response => ({
-  type: ADD,
-  payload: [['watson', response]]
+export const VolunteerModalOpenAction = () => ({
+  type: VOLUNTEER_MODAL_OPEN
 })
 
 /* ------------------ DEFAULT EXPORT ------------------ */

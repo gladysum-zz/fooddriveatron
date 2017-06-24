@@ -1,7 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import axios from 'axios';
+import {openTheOrganizerModal} from './reducer';
+import OrganizerModal from './OrganizerModal';
 
-export default class Organize extends React.Component {
+class Organize extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -53,7 +56,10 @@ export default class Organize extends React.Component {
 
     // Send input to database; get response with new fooddrive information
     axios.post('/fooddrives', {input: input})
-    .then(res=>{console.log(res.data)})
+    .then(res=>{
+      console.log(res.data);
+      this.props.openTheOrganizerModal();
+    })
     .catch(error=>{console.log(error)});
   }
 
@@ -61,6 +67,7 @@ export default class Organize extends React.Component {
     return (
       <div className="background">
         <div className="organize-container">
+          {this.props.organizermodal ? <OrganizerModal/> : null}
           <form onSubmit={this.handleSubmit}>
 
             <label>
@@ -181,3 +188,15 @@ export default class Organize extends React.Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  organizermodal: state.organizermodal
+})
+
+const mapDispatchToProps = dispatch => ({
+  openTheOrganizerModal: () => {
+    dispatch(openTheOrganizerModal())
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Organize)
