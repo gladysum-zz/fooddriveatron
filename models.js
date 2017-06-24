@@ -19,7 +19,7 @@ var User = db.define('user', {
 
 // The Fooddrive model
 var Fooddrive = db.define('fooddrive', {
-  fooddrivename: {
+  organizerphone: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {notEmpty: true}
@@ -37,19 +37,19 @@ var Fooddrive = db.define('fooddrive', {
      validate: {notEmpty: true}
   },
 
-  month: {
+  monthdayyear: {
     type: Sequelize.STRING,
     allowNull: false,
      validate: {notEmpty: true}
   },
 
-  date: {
+  starttime: {
     type: Sequelize.STRING,
     allowNull: false,
      validate: {notEmpty: true}
   },
 
-  year: {
+  endtime: {
     type: Sequelize.STRING,
     allowNull: false,
      validate: {notEmpty: true}
@@ -67,19 +67,7 @@ var Fooddrive = db.define('fooddrive', {
      validate: {notEmpty: true}
   },
 
-  town: {
-    type: Sequelize.STRING,
-    allowNull: false,
-     validate: {notEmpty: true}
-  },
-
-  state: {
-    type: Sequelize.STRING,
-    allowNull: false,
-     validate: {notEmpty: true}
-  },
-
-  zipcode: {
+  townstatezip: {
     type: Sequelize.STRING,
     allowNull: false,
      validate: {notEmpty: true}

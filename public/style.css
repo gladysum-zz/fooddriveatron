@@ -300,6 +300,81 @@
   width: 20%;
 }
 
+
+/* ----------- FoodDriveATron FORM ----------- */
+.myform{
+    margin:0 auto;
+    padding:14px;
+}
+#stylized{
+    border-width:1px;
+    border-style:solid;
+    border-color:#b7ddf2;
+    background:#ebf4fb;
+    padding: 10px 0 10px 10px;
+}
+#stylized h1 {
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:8px;
+    padding-bottom:10px;
+}
+#stylized label{
+    display:block;
+    font-size:11px;
+    font-weight:bold;
+    text-align:left;
+    padding:4px 2px;
+
+}
+#stylized input{
+    display: block;
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:95%;
+
+}
+
+#button {
+  background-color: #f46b22;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 10px;
+}
+
+#button:hover {
+  background-color: #dc5406;
+}
+
+.input-form {
+  width: 100%;
+}
+
+.input-col-left {
+  display:inline-block;
+  width: 33%;
+}
+
+.input-col-middle {
+  display:inline-block;
+  width: 33%;
+}
+
+.input-col-right {
+  display:inline-block;
+  width: 33%;
+}
+
+/* ----------- End FoodDriveATron FORM ----------- */
+
 .contact-info {
   background-color: white;
   border-radius: 14px;

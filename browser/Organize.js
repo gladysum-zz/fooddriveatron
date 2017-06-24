@@ -8,17 +8,15 @@ class Organize extends React.Component {
   constructor() {
     super();
     this.state = {
-      fooddrivename: '',
+      organizerphone: '',
       organizername: '',
       organizeremail: '',
-      month:'',
-      date: '',
-      year:'',
+      monthdayyear:'',
+      starttime: '',
+      endtime:'',
       venue:'',
       streetaddress:'',
-      town:'',
-      state:'',
-      zipcode:''
+      townstatezip:''
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,17 +36,15 @@ class Organize extends React.Component {
 
     // Clear the user input field upon submit
     this.setState({
-      fooddrivename: '',
+      organizerphone: '',
       organizername: '',
       organizeremail: '',
-      month:'',
-      date: '',
-      year:'',
+      monthdayyear:'',
+      starttime: '',
+      endtime:'',
       venue:'',
       streetaddress:'',
-      town:'',
-      state:'',
-      zipcode:''
+      townstatezip:''
     });
 
     // Update the redux store with user's input
@@ -73,7 +69,7 @@ class Organize extends React.Component {
           <div className="faqs-container">
 
               <div className="question">
-                Step 1: Find a Venu
+                Step 1: Find a Venue
               </div>
               <div className="answer">
                 Find a venue that is able to host your food drive. Your local school, library, or church are good places to start.
@@ -91,10 +87,10 @@ class Organize extends React.Component {
                 Make sure that your venue and local food bank are both open and available that day.
               </div>
               <div className="question">
-                Step 4: Enter Your Food Drive Info in the Food Drive A Tron
+                Step 4: Enter Your Food Drive Info in the <i>FoodDriveATron</i>
               </div>
               <div className="answer">
-                Before filling out the Food Drive A Tron, make sure you've completed steps 1, 2, and 3! Once you submit your food drive info, the Food Drive A Tron will kick off a series of automated processes that will send messages announcing your event to all your contacts. The messages will include a link to a website where people can sign up to volunteer. The Food Drive A Tron will also send reminder messages to the volunteers.
+                Before filling out the <i>FoodDriveATron</i>, make sure you've completed steps 1, 2, and 3! Once you submit your food drive info, the <i>FoodDriveATron</i> will kick off a series of automated processes that will send messages announcing your event to all your contacts. The messages will include a link to a website where people can sign up to volunteer. The <i>FoodDriveATron</i> will also send reminder messages to the volunteers.
               </div>
               <div className="question">
                 Step 5: Go to Your Successfully Planned Food Drive!
@@ -104,124 +100,115 @@ class Organize extends React.Component {
               </div>
               <hr/>
               <div className="form-title">
-                Food Drive A Tron
+                <i>FoodDriveATron</i>
               </div>
 
               {this.props.organizermodal ? <OrganizerModal/> : null}
+
               <form onSubmit={this.handleSubmit}>
 
-                <label>
-                  Name of food drive:
-                  <input
-                    name="fooddrivename"
-                    type="text"
-                    value={this.state.fooddrivename}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                <div className="input-form">
+                <div id="stylized">
 
-                <label>
-                  Your name:
-                  <input
-                    name="organizername"
-                    type="text"
-                    value={this.state.organizername}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                <div className="input-col-left">
+                  <h1>Your contact info</h1>
 
-                <label>
-                  Your email:
-                  <input
-                    name="organizeremail"
-                    type="text"
-                    value={this.state.organizeremail}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                  <label>
+                    Your full name:
+                    <input
+                      name="organizername"
+                      type="text"
+                      value={this.state.organizername}
+                      onChange={this.handleChange} />
+                  </label>
+                  <br/>
 
-                <label>
-                  Month:
-                  <input
-                    name="month"
-                    type="text"
-                    value={this.state.month}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                  <label>
+                    Your email:
+                    <input
+                      name="organizeremail"
+                      type="text"
+                      value={this.state.organizeremail}
+                      onChange={this.handleChange} />
+                  </label>
+                  <br/>
 
-                <label>
-                  Date:
-                  <input
-                    name="date"
-                    type="text"
-                    value={this.state.date}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                  <label>
+                    Your phone number:
+                    <input
+                      name="organizerphone"
+                      type="text"
+                      value={this.state.organizerphone}
+                      onChange={this.handleChange} />
+                  </label>
+                </div>
 
-                <label>
-                  Year:
-                  <input
-                    name="year"
-                    type="text"
-                    value={this.state.year}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                <div className="input-col-middle">
+                  <h1>When is your food drive?</h1>
+                  <label>
+                    Month, day, year:
+                    <input
+                      name="monthdayyear"
+                      type="text"
+                      value={this.state.monthdayyear}
+                      onChange={this.handleChange} />
+                  </label>
+                  <br/>
 
-                <label>
-                  Venue:
-                  <input
-                    name="venue"
-                    type="text"
-                    value={this.state.venue}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                  <label>
+                    Start time:
+                    <input
+                      name="starttime"
+                      type="text"
+                      value={this.state.starttime}
+                      onChange={this.handleChange} />
+                  </label>
+                  <br/>
 
-                <label>
-                  streetaddress:
-                  <input
-                    name="streetaddress"
-                    type="text"
-                    value={this.state.streetaddress}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                  <label>
+                    End time:
+                    <input
+                      name="endtime"
+                      type="text"
+                      value={this.state.endtime}
+                      onChange={this.handleChange} />
+                  </label>
+                </div>
 
-                <label>
-                  town:
-                  <input
-                    name="town"
-                    type="text"
-                    value={this.state.town}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                <div className="input-col-right">
+                  <h1>Where is your food drive?</h1>
+                  <label>
+                    Name of venue:
+                    <input
+                      name="venue"
+                      type="text"
+                      value={this.state.venue}
+                      onChange={this.handleChange} />
+                  </label>
+                  <br/>
 
-                <label>
-                  state:
-                  <input
-                    name="state"
-                    type="text"
-                    value={this.state.state}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
+                  <label>
+                    Venue street address:
+                    <input
+                      name="streetaddress"
+                      type="text"
+                      value={this.state.streetaddress}
+                      onChange={this.handleChange} />
+                  </label>
+                  <br/>
 
-                <label>
-                  zipcode:
-                  <input
-                    name="zipcode"
-                    type="text"
-                    value={this.state.zipcode}
-                    onChange={this.handleChange} />
-                </label>
-                <br/>
-
-                <br/>
-                <input type="submit" value="Submit" />
+                  <label>
+                    Venue town, state, zipcode:
+                    <input
+                      name="townstatezip"
+                      type="text"
+                      value={this.state.townstatezip}
+                      onChange={this.handleChange} />
+                  </label>
+                </div>
+                </div>
+                </div>
+                <input type="submit" value="Submit" id="button"/>
               </form>
 
           </div>

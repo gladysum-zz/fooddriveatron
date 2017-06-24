@@ -33658,7 +33658,7 @@
 	}
 	
 	var Nav = function Nav() {
-	  return _react2.default.createElement('div', { className: 'nav' }, _react2.default.createElement('div', { className: 'nav-col-left' }, _react2.default.createElement('div', { id: 'home-link' }, 'Food Drive A Tron')), _react2.default.createElement('div', { className: 'nav-col-right' }, _react2.default.createElement('div', { className: 'dropdown' }, _react2.default.createElement('button', { className: 'dropbtn' }, _react2.default.createElement('div', { className: 'nav-icon' }), _react2.default.createElement('div', { className: 'nav-icon' }), _react2.default.createElement('div', { className: 'nav-icon' })), _react2.default.createElement('div', { className: 'dropdown-content' }, _react2.default.createElement(_reactRouterDom.Link, { to: '/', className: 'link', id: 'menu-link' }, 'ORGANIZE'), _react2.default.createElement(_reactRouterDom.Link, { to: '/volunteer', className: 'link', id: 'menu-link' }, 'VOLUNTEER')))));
+	  return _react2.default.createElement('div', { className: 'nav' }, _react2.default.createElement('div', { className: 'nav-col-left' }, _react2.default.createElement('div', { id: 'home-link' }, 'FoodDriveATron')), _react2.default.createElement('div', { className: 'nav-col-right' }, _react2.default.createElement('div', { className: 'dropdown' }, _react2.default.createElement('button', { className: 'dropbtn' }, _react2.default.createElement('div', { className: 'nav-icon' }), _react2.default.createElement('div', { className: 'nav-icon' }), _react2.default.createElement('div', { className: 'nav-icon' })), _react2.default.createElement('div', { className: 'dropdown-content' }, _react2.default.createElement(_reactRouterDom.Link, { to: '/', className: 'link', id: 'menu-link' }, 'ORGANIZE'), _react2.default.createElement(_reactRouterDom.Link, { to: '/volunteer', className: 'link', id: 'menu-link' }, 'VOLUNTEER')))));
 	};
 	
 	exports.default = Nav;
@@ -42086,17 +42086,15 @@
 	    var _this = _possibleConstructorReturn(this, (Organize.__proto__ || Object.getPrototypeOf(Organize)).call(this));
 	
 	    _this.state = {
-	      fooddrivename: '',
+	      organizerphone: '',
 	      organizername: '',
 	      organizeremail: '',
-	      month: '',
-	      date: '',
-	      year: '',
+	      monthdayyear: '',
+	      starttime: '',
+	      endtime: '',
 	      venue: '',
 	      streetaddress: '',
-	      town: '',
-	      state: '',
-	      zipcode: ''
+	      townstatezip: ''
 	    };
 	    _this.handleChange = _this.handleChange.bind(_this);
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -42120,17 +42118,15 @@
 	
 	      // Clear the user input field upon submit
 	      this.setState({
-	        fooddrivename: '',
+	        organizerphone: '',
 	        organizername: '',
 	        organizeremail: '',
-	        month: '',
-	        date: '',
-	        year: '',
+	        monthdayyear: '',
+	        starttime: '',
+	        endtime: '',
 	        venue: '',
 	        streetaddress: '',
-	        town: '',
-	        state: '',
-	        zipcode: ''
+	        townstatezip: ''
 	      });
 	
 	      // Update the redux store with user's input
@@ -42147,11 +42143,7 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'background' }, _react2.default.createElement('div', { className: 'organize-container' }, _react2.default.createElement('div', { className: 'faqs-title' }, 'Organizing a Food Drive Is Easy!'), _react2.default.createElement('div', { className: 'faqs-container' }, _react2.default.createElement('div', { className: 'question' }, 'Step 1: Find a Venu'), _react2.default.createElement('div', { className: 'answer' }, 'Find a venue that is able to host your food drive. Your local school, library, or church are good places to start.'), _react2.default.createElement('div', { className: 'question' }, 'Step 2: Find a Food Bank'), _react2.default.createElement('div', { className: 'answer' }, 'Find a local food bank that is able to accept your donations.'), _react2.default.createElement('div', { className: 'question' }, 'Step 3: Decide on a Date and Time'), _react2.default.createElement('div', { className: 'answer' }, 'Make sure that your venue and local food bank are both open and available that day.'), _react2.default.createElement('div', { className: 'question' }, 'Step 4: Enter Your Food Drive Info in the Food Drive A Tron'), _react2.default.createElement('div', { className: 'answer' }, 'Before filling out the Food Drive A Tron, make sure you\'ve completed steps 1, 2, and 3! Once you submit your food drive info, the Food Drive A Tron will kick off a series of automated processes that will send messages announcing your event to all your contacts. The messages will include a link to a website where people can sign up to volunteer. The Food Drive A Tron will also send reminder messages to the volunteers.'), _react2.default.createElement('div', { className: 'question' }, 'Step 5: Go to Your Successfully Planned Food Drive!'), _react2.default.createElement('div', { className: 'answer' }, 'Show up at the venue on the day of your food drive and have a great time!'), _react2.default.createElement('hr', null), _react2.default.createElement('div', { className: 'form-title' }, 'Food Drive A Tron'), this.props.organizermodal ? _react2.default.createElement(_OrganizerModal2.default, null) : null, _react2.default.createElement('form', { onSubmit: this.handleSubmit }, _react2.default.createElement('label', null, 'Name of food drive:', _react2.default.createElement('input', {
-	        name: 'fooddrivename',
-	        type: 'text',
-	        value: this.state.fooddrivename,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Your name:', _react2.default.createElement('input', {
+	      return _react2.default.createElement('div', { className: 'background' }, _react2.default.createElement('div', { className: 'organize-container' }, _react2.default.createElement('div', { className: 'faqs-title' }, 'Organizing a Food Drive Is Easy!'), _react2.default.createElement('div', { className: 'faqs-container' }, _react2.default.createElement('div', { className: 'question' }, 'Step 1: Find a Venue'), _react2.default.createElement('div', { className: 'answer' }, 'Find a venue that is able to host your food drive. Your local school, library, or church are good places to start.'), _react2.default.createElement('div', { className: 'question' }, 'Step 2: Find a Food Bank'), _react2.default.createElement('div', { className: 'answer' }, 'Find a local food bank that is able to accept your donations.'), _react2.default.createElement('div', { className: 'question' }, 'Step 3: Decide on a Date and Time'), _react2.default.createElement('div', { className: 'answer' }, 'Make sure that your venue and local food bank are both open and available that day.'), _react2.default.createElement('div', { className: 'question' }, 'Step 4: Enter Your Food Drive Info in the ', _react2.default.createElement('i', null, 'FoodDriveATron')), _react2.default.createElement('div', { className: 'answer' }, 'Before filling out the ', _react2.default.createElement('i', null, 'FoodDriveATron'), ', make sure you\'ve completed steps 1, 2, and 3! Once you submit your food drive info, the ', _react2.default.createElement('i', null, 'FoodDriveATron'), ' will kick off a series of automated processes that will send messages announcing your event to all your contacts. The messages will include a link to a website where people can sign up to volunteer. The ', _react2.default.createElement('i', null, 'FoodDriveATron'), ' will also send reminder messages to the volunteers.'), _react2.default.createElement('div', { className: 'question' }, 'Step 5: Go to Your Successfully Planned Food Drive!'), _react2.default.createElement('div', { className: 'answer' }, 'Show up at the venue on the day of your food drive and have a great time!'), _react2.default.createElement('hr', null), _react2.default.createElement('div', { className: 'form-title' }, _react2.default.createElement('i', null, 'FoodDriveATron')), this.props.organizermodal ? _react2.default.createElement(_OrganizerModal2.default, null) : null, _react2.default.createElement('form', { onSubmit: this.handleSubmit }, _react2.default.createElement('div', { className: 'input-form' }, _react2.default.createElement('div', { id: 'stylized' }, _react2.default.createElement('div', { className: 'input-col-left' }, _react2.default.createElement('h1', null, 'Your contact info'), _react2.default.createElement('label', null, 'Your full name:', _react2.default.createElement('input', {
 	        name: 'organizername',
 	        type: 'text',
 	        value: this.state.organizername,
@@ -42159,39 +42151,35 @@
 	        name: 'organizeremail',
 	        type: 'text',
 	        value: this.state.organizeremail,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Month:', _react2.default.createElement('input', {
-	        name: 'month',
+	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Your phone number:', _react2.default.createElement('input', {
+	        name: 'organizerphone',
 	        type: 'text',
-	        value: this.state.month,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Date:', _react2.default.createElement('input', {
-	        name: 'date',
+	        value: this.state.organizerphone,
+	        onChange: this.handleChange }))), _react2.default.createElement('div', { className: 'input-col-middle' }, _react2.default.createElement('h1', null, 'When is your food drive?'), _react2.default.createElement('label', null, 'Month, day, year:', _react2.default.createElement('input', {
+	        name: 'monthdayyear',
 	        type: 'text',
-	        value: this.state.date,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Year:', _react2.default.createElement('input', {
-	        name: 'year',
+	        value: this.state.monthdayyear,
+	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Start time:', _react2.default.createElement('input', {
+	        name: 'starttime',
 	        type: 'text',
-	        value: this.state.year,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Venue:', _react2.default.createElement('input', {
+	        value: this.state.starttime,
+	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'End time:', _react2.default.createElement('input', {
+	        name: 'endtime',
+	        type: 'text',
+	        value: this.state.endtime,
+	        onChange: this.handleChange }))), _react2.default.createElement('div', { className: 'input-col-right' }, _react2.default.createElement('h1', null, 'Where is your food drive?'), _react2.default.createElement('label', null, 'Name of venue:', _react2.default.createElement('input', {
 	        name: 'venue',
 	        type: 'text',
 	        value: this.state.venue,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'streetaddress:', _react2.default.createElement('input', {
+	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Venue street address:', _react2.default.createElement('input', {
 	        name: 'streetaddress',
 	        type: 'text',
 	        value: this.state.streetaddress,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'town:', _react2.default.createElement('input', {
-	        name: 'town',
+	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'Venue town, state, zipcode:', _react2.default.createElement('input', {
+	        name: 'townstatezip',
 	        type: 'text',
-	        value: this.state.town,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'state:', _react2.default.createElement('input', {
-	        name: 'state',
-	        type: 'text',
-	        value: this.state.state,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('label', null, 'zipcode:', _react2.default.createElement('input', {
-	        name: 'zipcode',
-	        type: 'text',
-	        value: this.state.zipcode,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null), _react2.default.createElement('br', null), _react2.default.createElement('input', { type: 'submit', value: 'Submit' })))));
+	        value: this.state.townstatezip,
+	        onChange: this.handleChange }))))), _react2.default.createElement('input', { type: 'submit', value: 'Submit', id: 'button' })))));
 	    }
 	  }]);
 	

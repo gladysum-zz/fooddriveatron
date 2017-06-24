@@ -8,7 +8,7 @@ const Nav = ()=>(
   <div className="nav">
     <div className="nav-col-left">
       <div id="home-link">
-        Food Drive A Tron
+        FoodDriveATron
       </div>
 
     </div>
