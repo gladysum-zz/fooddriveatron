@@ -42178,7 +42178,7 @@
 	        name: 'townstatezip',
 	        type: 'text',
 	        value: this.state.townstatezip,
-	        onChange: this.handleChange }))))), _react2.default.createElement('input', { type: 'submit', value: 'Submit', id: 'button' })))));
+	        onChange: this.handleChange }))))), _react2.default.createElement('div', { id: 'button-container' }, _react2.default.createElement('input', { type: 'submit', value: 'Submit', id: 'button' }))))));
 	    }
 	  }]);
 	
@@ -46970,7 +46970,7 @@
 	        name: 'timeslot3',
 	        type: 'checkbox',
 	        checked: this.state.timeslot3,
-	        onChange: this.handleChange })), _react2.default.createElement('br', null)), _react2.default.createElement('div', { className: 'input-col-right' }))), _react2.default.createElement('input', { type: 'submit', value: 'Submit', id: 'button' })))));
+	        onChange: this.handleChange })), _react2.default.createElement('br', null)), _react2.default.createElement('div', { className: 'input-col-right' }))), _react2.default.createElement('div', { id: 'button-container' }, _react2.default.createElement('input', { type: 'submit', value: 'Submit', id: 'button' }))))));
 	    }
 	  }]);
 	

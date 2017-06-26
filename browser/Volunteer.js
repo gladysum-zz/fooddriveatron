@@ -191,7 +191,9 @@ class Volunteer extends React.Component {
                 </div>
                 </div>
                 </div>
-                <input type="submit" value="Submit" id="button"/>
+                <div id="button-container">
+                  <input type="submit" value="Submit" id="button"/>
+                </div>
               </form>
 
           </div>
