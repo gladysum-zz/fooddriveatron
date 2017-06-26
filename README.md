@@ -11,5 +11,5 @@ A web-based app that makes it as easy as possible for anyone to organize a food 
 3. Clone this repo to your local machine
 3. Command line: npm install
 4. Command line: npm start
-5. Browser: http://localhost:3000/volunteer
+5. Browser: http://localhost:3000
 
