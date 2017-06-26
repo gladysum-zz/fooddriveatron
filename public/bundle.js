@@ -42086,14 +42086,14 @@
 	    var _this = _possibleConstructorReturn(this, (Organize.__proto__ || Object.getPrototypeOf(Organize)).call(this));
 	
 	    _this.state = {
-	      organizerphone: '(202)725-1002',
+	      organizerphone: '(212)765-4321',
 	      organizername: 'Gladys Um',
-	      organizeremail: 'gladysum@gmail.com',
+	      organizeremail: 'amazingdev@gmail.com',
 	      monthdayyear: 'August 20, 2017',
 	      starttime: '10AM',
 	      endtime: '4PM',
 	      venue: 'PS 123',
-	      streetaddress: '4 Hill St',
+	      streetaddress: '4 Hill Street',
 	      townstatezip: 'New York NY 11212'
 	    };
 	    _this.handleChange = _this.handleChange.bind(_this);
@@ -42116,6 +42116,7 @@
 	      event.preventDefault();
 	      var input = this.state;
 	
+	      // The form is pre-populated and the following code is commented out for demo purposes
 	      // Clear the user input field upon submit
 	      // this.setState({
 	      //   organizerphone: '',
@@ -42128,9 +42129,6 @@
 	      //   streetaddress:'',
 	      //   townstatezip:''
 	      // });
-	
-	      // Update the redux store with user's input
-	      //this.props.addInput(input)
 	
 	      // Send input to database; get response with new fooddrive information
 	      _axios2.default.post('/fooddrives', { input: input }).then(function (res) {
@@ -46918,6 +46916,7 @@
 	      //   input['volunteers3'] = this.state.volunteername;
 	      // }
 	
+	      // The form is pre-populated and the following code is commented out for demo purposes
 	      // Clear the user input field upon submit
 	      // this.setState({
 	      //   volunteerphone: '',
@@ -46930,9 +46929,6 @@
 	
 	      // Show the volunteer confirmation modal
 	      this.props.openTheVolunteerModal();
-	
-	      // Update the redux store with user's input
-	      //this.props.addInput(input)
 	
 	      // Send input to database; get response with new fooddrive information
 	      // axios.put(`/fooddrives/${this.props.fooddrive.id}`, {input: input})

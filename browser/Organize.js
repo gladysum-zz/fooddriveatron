@@ -8,14 +8,14 @@ class Organize extends React.Component {
   constructor() {
     super();
     this.state = {
-      organizerphone: '(202)725-1002',
+      organizerphone: '(212)765-4321',
       organizername: 'Gladys Um',
-      organizeremail: 'gladysum@gmail.com',
+      organizeremail: 'amazingdev@gmail.com',
       monthdayyear:'August 20, 2017',
       starttime: '10AM',
       endtime:'4PM',
       venue:'PS 123',
-      streetaddress:'4 Hill St',
+      streetaddress:'4 Hill Street',
       townstatezip:'New York NY 11212'
     }
     this.handleChange = this.handleChange.bind(this);
@@ -34,6 +34,7 @@ class Organize extends React.Component {
     event.preventDefault();
     let input = this.state;
 
+    // The form is pre-populated and the following code is commented out for demo purposes
     // Clear the user input field upon submit
     // this.setState({
     //   organizerphone: '',
@@ -46,9 +47,6 @@ class Organize extends React.Component {
     //   streetaddress:'',
     //   townstatezip:''
     // });
-
-    // Update the redux store with user's input
-    //this.props.addInput(input)
 
     // Send input to database; get response with new fooddrive information
     axios.post('/fooddrives', {input: input})

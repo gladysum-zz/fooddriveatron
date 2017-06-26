@@ -42,6 +42,7 @@ class Volunteer extends React.Component {
     //   input['volunteers3'] = this.state.volunteername;
     // }
 
+    // The form is pre-populated and the following code is commented out for demo purposes
     // Clear the user input field upon submit
     // this.setState({
     //   volunteerphone: '',
@@ -54,9 +55,6 @@ class Volunteer extends React.Component {
 
     // Show the volunteer confirmation modal
     this.props.openTheVolunteerModal();
-
-    // Update the redux store with user's input
-    //this.props.addInput(input)
 
     // Send input to database; get response with new fooddrive information
     // axios.put(`/fooddrives/${this.props.fooddrive.id}`, {input: input})
