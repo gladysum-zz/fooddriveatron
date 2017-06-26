@@ -55,7 +55,7 @@ class OrganizerModal extends React.Component {
           </div>
 
           <div className="question">
-            Spread the word about the food drive on social networks:
+            Spread the word about your food drive on social networks:
           </div>
 
           <div className="socialmedia">
