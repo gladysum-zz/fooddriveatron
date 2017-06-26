@@ -57,11 +57,11 @@ class VolunteerModal extends React.Component {
 
           <div className="socialmedia">
             <img src="./images/gmail.png" style={{width: "60px", height: "40px", paddingRight: "30px"}}/>
-            <img src="./images/fb.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
+            <img src="./images/fb.png" style={{width: "43px", height: "40px", paddingRight: "30px"}}/>
             <img src="./images/tw.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
             <img src="./images/ig.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
             <img src="./images/snap.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
-            <img src="./images/in.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
+            <img src="./images/in.png" style={{width: "46px", height: "40px", paddingRight: "30px"}}/>
             <img src="./images/twilio.png" style={{width: "40px", height: "40px", paddingRight: "30px"}}/>
           </div>
 
