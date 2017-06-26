@@ -41,7 +41,7 @@ class OrganizerModal extends React.Component {
           open={this.state.open}
         >
           <div className="question">
-            Your food drive will take place at the following venue:
+            Your food drive will take place at the following location:
           </div>
           <div className="answer">
             {this.props.fooddrive.venue + ', ' + this.props.fooddrive.streetaddress + ', ' + this.props.fooddrive.townstatezip}
@@ -55,7 +55,7 @@ class OrganizerModal extends React.Component {
           </div>
 
           <div className="question">
-            Spread the news about the food drive on social networks:
+            Spread the word about the food drive on social networks:
           </div>
 
           <div className="socialmedia">
